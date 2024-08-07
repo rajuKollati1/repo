@@ -13,6 +13,17 @@ spec:
     metadata:
       labels:
         app: nginx
+     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - nginx
+            topologyKey: kubernetes.io/hostname   
     spec:
       containers:
       - name: nginx
