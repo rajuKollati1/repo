@@ -24,7 +24,7 @@ spec:
                 values:
                 - nginx
             topologyKey: kubernetes.io/hostname   
-    spec:
+     spec:
       containers:
       - name: nginx
         image: nginx:latest
