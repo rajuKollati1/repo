@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: nginx
-     spec:
+  spec:
       affinity:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
