@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: nginx
-  spec:
+    spec: # Fixed indentation here
       affinity:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -24,8 +24,7 @@ spec:
                 values:
                 - nginx
             topologyKey: kubernetes.io/hostname   
-     spec:
-      containers:
+      containers: # Fixed indentation here
       - name: nginx
         image: nginx:latest
         ports:
