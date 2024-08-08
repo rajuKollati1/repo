@@ -13,17 +13,6 @@ spec:
     metadata:
       labels:
         app: nginx
-    spec: # Fixed indentation here
-      affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - nginx
-            topologyKey: kubernetes.io/hostname   
       containers: # Fixed indentation here
       - name: nginx
         image: nginx:latest
